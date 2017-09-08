@@ -1,11 +1,13 @@
 // Libraries
 const fs = require('fs');
 const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
 const { assert } = require('chai');
 
 // HTML
 const srcHtml = fs.readFileSync('./src/index.html');
-const doc = jsdom.jsdom(srcHtml);
+const { document } = (new JSDOM(srcHtml)).window;
+const doc = document;
 
 // Tests
 describe('The webpage', () => {
