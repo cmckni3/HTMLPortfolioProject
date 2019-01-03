@@ -26,5 +26,12 @@
     "presets": [
       "es2015"
     ]
+  },
+  "greenkeeper": {
+    "ignore": [
+      "chai",
+      "jsdom",
+      "mocha"
+    ]
   }
 }
